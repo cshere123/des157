@@ -25,7 +25,7 @@ h2 {
   border-bottom-color: #B1CDFA;
   border-bottom-width: medium;
   width: 150px;
-  padding: 10px 0px 5px 0px
+  padding: 10px 0px 5px 0px;
 }
 
 h1, h2, h3 {
@@ -65,8 +65,9 @@ ul, ol {
 
 footer {
   clear: left;
-  bottom: 40%;
-  text-align: center;
+  position: fixed;
+  bottom: 0%;
+  margin-left: 300px;
   text-decoration: none;
 }
 
