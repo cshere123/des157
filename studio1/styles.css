@@ -1,5 +1,5 @@
 body {
-  padding: 50px;
+  padding: 40px;
   font-family: 'Alegreya Sans', sans-serif;
 }
 
@@ -9,12 +9,12 @@ div {
   margin: auto;
 }
 
-header img{
+header img {
   margin-left: 300px;
 }
 
 h1 {
-  font-family: 'Baloo Paaji', cursive;
+  font-family: 'Indie Flower', cursive;
   color: #B12057;
   text-align: center;
 }
@@ -22,10 +22,15 @@ h1 {
 article {
   width: 50%;
   float: left;
+  margin: 20px;
+  border-radius: 30px;
+  padding: 15px 25px 15px 30px;
+  width: 400px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, .25);
 }
 
 form {
-  margin-left: 50%;
+  margin-left: 15%;
   max-width: 300px;
 }
 
@@ -44,8 +49,10 @@ input {
   background-color: pink;
 }
 
-input[type="text"] {
-  width: 80px;
+input[type="text"], input[type="time"] {
+  width: 90px;
+  border-radius: 10px;
+  margin: 5px;
   font-family: 'Alegreya Sans', sans-serif;
 }
 
@@ -54,7 +61,7 @@ input[type="reset"], input[type="submit"] {
   margin: 2%;
   background-color: #B12057;
   color: white;
-  border-style: none;
+  border-radius: 20px;
 }
 
 input[type="reset"]:focus, input[type="submit"]:focus {
@@ -63,23 +70,18 @@ input[type="reset"]:focus, input[type="submit"]:focus {
 }
 
 p {
-  background-image: url(images/binder-paper.png);
-  border-left: 2px red solid;
-  background-position: center;
   font-size: 20px;
   font-family: 'Indie Flower', cursive;
-  margin-right: 20%;
   line-height: 28px;
-  box-sizing: border-box;
-  border-radius: 5px;
+  width: 400px;
 }
 
 footer {
   clear: right;
   position: fixed;
-  bottom: 20%;
+  bottom: 0%;
   text-decoration: none;
-  margin-left: 400px;
+  left: 0%;
 }
 
 a:link {
@@ -93,9 +95,9 @@ a:hover {
 }
 
 .show {
-  visibility: visible;
+  display: block;
 }
 
 .hide {
-  visibility: hidden;
+  display: none;
 }
