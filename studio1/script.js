@@ -2,13 +2,13 @@
 console.log("reading \ntest");
 
 var results = document.getElementById("results");
-var results = document.getElementById("myMsg");
+var myMsg = document.getElementById("myMsg");
 
 document.f.onsubmit = processForm;
 document.f.onreset = resetForm;
 
 function processForm() {
-
+  results.setAttribute("class", "show");
   var userName = document.f.userName.value;
   var classSubject = document.f.classSubject.value;
   var nounOne = document.f.nounOne.value;
