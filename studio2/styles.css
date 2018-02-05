@@ -1,0 +1,25 @@
+/* media query for desktop */
+
+@media only screen and (min-width: 768px) {
+  /* declarations */
+}
+
+#tangerine {
+  display: none;
+}
+
+#sharpie{
+  display: none;
+}
+
+#ruler {
+  display: none;
+}
+
+#description {
+  display: none;
+}
+footer {
+  position: fixed;
+  bottom: 20%;
+}
