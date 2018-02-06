@@ -1,6 +1,6 @@
 body {
   font-family: 'Amatic SC', cursive;
-  width: 100%;
+  width: 90%;
   margin: auto;
   font-size: 1.5em;
 }
@@ -10,18 +10,22 @@ header {
   font-size: 3em;
 }
 
+#title1 {
+  font-size: 2em;
+}
+
+img {
+  display: inline-flex;
+}
+
 #bag {
-  width: 700px;
-  margin: auto;
   display: flex;
   justify-content: center;
   position: absolute;
-  padding: 50px;
 }
 
 #tangerine {
   display: none;
-  position: relative;
   border: 1px black solid;
   box-sizing: border-box;
   background-color: white;
@@ -38,38 +42,47 @@ header {
 #ruler {
   display: none;
   position: relative;
-  border: 1px black solid;
-  box-sizing: border-box;
-  background-color: white;
 }
-
-/* #description {
-  display: block;
-} */
 
 /* media query for desktop */
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 769px) {
   /* declarations */
-  /* h2 {
-    font-size: 4em;
-  } */
   img {
     display: inline-block;
     padding: 4.5%;
   }
   div {
     width: 90%;
-    margin-left: 15%;
   }
   #tangerine {
-    width: 10%;
+    width: 15%;
   }
   #sharpie {
-    width: 30%;
+    width: 25%;
   }
   #ruler {
-    height: 20%;
+    height: 30%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  img {
+    display: inline-block;
+    padding: 4.5%;
+  }
+  div {
+    width: 90%;
+    /* margin-left: 15%; */
+  }
+  #tangerine {
+    width: 15%;
+  }
+  #sharpie {
+    width: 25%;
+  }
+  #ruler {
+    height: 30%;
   }
 }
 
