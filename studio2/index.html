@@ -11,36 +11,20 @@
 </head>
 
 <body>
-  <header>WHAT ITS IN MY BAG?</header>
+  <header>WHAT IT'S IN MY BAG?</header>
   <div id="bag">
     <img src="images/backpack.png" alt="backpack" height=400 id="hover">
   </div>
 
   <!-- <div id="close"></div> -->
-
-  <div>
-    <section id="tangerine">
-      <div id="close">&otimes;</div>
-      <img src="images/tangerine.png" alt="tangerine" width=100>
-      <p class="title"></p>
-      <p class="description"></p>
-    </section>
-
-    <section id="sharpie">
-      <!-- <div class="close">&otimes;</div> -->
-      <img src="images/sharpie.png" alt="sharpie" width=300>
-      <p class="title"></p>
-      <p class="description"></p>
-    </section>
-
-
-    <section id="ruler">
-      <!-- <div class="close">&otimes;</div> -->
-      <img src="images/ruler.png" alt="ruler" width=300>
-      <p class="title"></p>
-      <p class="description"></p>
-    </section>
-  </div>
+  <section id="wrapper">
+    <div id="close">&otimes;</div>
+    <img src="images/tangerine.png" alt="tangerine" width=100 id="tangerine" class="item">
+    <img src="images/sharpie.png" alt="sharpie" width=300 id="sharpie" class="item">
+    <img src="images/ruler.png" alt="ruler" width=300 id="ruler" class="item">
+    <h2 id="title" class="text"></h2>
+    <p id="description" class="text"></p>
+  </section>
 
   <footer>
     <a href="https://validator.w3.org/check?uri=referer">Valid HTML 5</a>
