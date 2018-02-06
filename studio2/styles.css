@@ -1,7 +1,5 @@
 body {
   font-family: 'Amatic SC', cursive;
-  width: 90%;
-  margin: auto;
   font-size: 1.5em;
 }
 
@@ -10,12 +8,48 @@ header {
   font-size: 3em;
 }
 
-#title1 {
-  font-size: 2em;
+div {
+  width: 100%;
+  margin: auto;
 }
 
-img {
-  display: inline-flex;
+/* positioning items */
+
+.item {
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+
+#wrapper {
+  display: none;
+}
+
+#tangerine {
+  width: 15%;
+}
+
+#sharpie {
+  width: 25%;
+}
+
+#ruler {
+  width: 30%;
+}
+
+#title {
+  font-size: 2em;
+  clear: left;
+  text-align: center;
+}
+
+#description {
+  text-align: center;
+}
+
+#close {
+  display: block;
+  clear: left;
 }
 
 #bag {
@@ -24,85 +58,31 @@ img {
   position: absolute;
 }
 
-#tangerine {
-  display: none;
-  border: 1px black solid;
-  box-sizing: border-box;
-  background-color: white;
-}
-
-#sharpie {
-  display: none;
-  position: relative;
-  border: 1px black solid;
-  box-sizing: border-box;
-  background-color: white;
-}
-
-#ruler {
-  display: none;
-  position: relative;
-}
-
 /* media query for desktop */
-
-@media only screen and (max-width: 769px) {
-  /* declarations */
-  img {
-    display: inline-block;
-    padding: 4.5%;
-  }
-  div {
-    width: 90%;
-  }
-  #tangerine {
-    width: 15%;
-  }
-  #sharpie {
-    width: 25%;
-  }
-  #ruler {
-    height: 30%;
-  }
-}
-
 @media only screen and (min-width: 768px) {
-  img {
-    display: inline-block;
-    padding: 4.5%;
+  .item {
+    width: 50%;
   }
-  div {
-    width: 90%;
-    /* margin-left: 15%; */
+  .text {
+    transform: translate(-25%, 50%);
   }
-  #tangerine {
-    width: 15%;
-  }
-  #sharpie {
-    width: 25%;
-  }
-  #ruler {
-    height: 30%;
+  #wrapper {
+    transform: translate(25%, 0%);
   }
 }
 
 footer {
   position: fixed;
-  bottom: 10%;
+  left: 42%;
+  bottom: 20%;
 }
 
-#close {
-  display: block;
-  float: right;
+a:link {
+  text-decoration: none;
+  color: black;
+  margin-right: 30px;
 }
 
-/*overlay*/
-
-.show {
-  display: block;
-  position: absolute;
-}
-
-.hide {
-  display: none;
+a:visited {
+  color: black;
 }
