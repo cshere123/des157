@@ -21,7 +21,8 @@ div {
 .item {
   margin-left: auto;
   margin-right: auto;
-  justify-content: center;
+  display: inline-block;
+  width: 10%;
 }
 
 #wrapper {
