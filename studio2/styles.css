@@ -33,7 +33,7 @@ div {
 
 #title {
   font-size: 1.5em;
-  clear: left;
+  margin-top: 80px;
   text-align: center;
 }
 
@@ -55,13 +55,14 @@ div {
 
 @media only screen and (max-width: 768px) {
   .item {
-    width: 30%;
+    width: 40%;
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
     padding: 0%;
+    padding-bottom: 20px;
   }
   .text {
     transform: translate(0%, 30%);
@@ -69,15 +70,12 @@ div {
   #close {
     transform: translate(20%, 200%);
   }
-  footer {
-    /* bottom: 20%; */
-  }
 }
 
 footer {
   position: fixed;
-  text-align: center;
   bottom: 20%;
+  padding-left: 10%;
 }
 
 a:link {
