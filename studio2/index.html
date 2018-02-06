@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="(https://cdn.jsdelivr.net/npm/normalize.css@7.0.0/normalize.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700" rel="stylesheet">
   <link href="styles.css" rel="stylesheet">
   <title>Studio2</title>
 </head>
@@ -15,27 +16,29 @@
     <img src="images/backpack.png" alt="backpack" height=400 id="hover">
   </div>
 
-  <aside id="items">
-    <img src="images/tangerine.png" alt="tangerine" height=400 id="tangerine">
-    <img src="images/sharpie.png" alt="sharpie" height=400 id="sharpie">
-    <img src="images/ruler.png" alt="ruler" height=400 id="ruler">
-  </aside>
+  <div id="overlay" class="show">
+    <aside id="items">
+      <div id="close">&otimes;</div>
+      <img src="images/tangerine.png" alt="tangerine" width=100 id="tangerine">
+      <img src="images/sharpie.png" alt="sharpie" width=300 id="sharpie">
+      <img src="images/ruler.png" alt="ruler" width=300 id="ruler">
+    </aside>
 
-  <div id="description">
-    <section id="tangdescrip">
-      <h2>CUTIES</h2>
-      <p>Because I need my daily dose of Vitamin C</p>
-    </section>
-    <section id="sharpiedescrip">
-      <h2>FINE SHARPIE</h2>
-      <p>Because line strokes</p>
-    </section>
-    <section id="rulerdescrip">
-      <h2>MINI RULER</h2>
-      <p>Because lines</p>
-    </section>
+    <aside id="description" class="hide">
+      <section id="tangdescrip">
+        <h2>CUTIES</h2>
+        <p>Because I need my daily dose of Vitamin C</p>
+      </section>
+      <section id="sharpiedescrip">
+        <h2>FINE SHARPIE</h2>
+        <p>Because line strokes</p>
+      </section>
+      <section id="rulerdescrip">
+        <h2>MINI RULER</h2>
+        <p>Because lines</p>
+      </section>
+    </aside>
   </div>
-  
   <footer>
     <a href="https://validator.w3.org/check?uri=referer">Valid HTML 5</a>
     <a href="https://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a>
