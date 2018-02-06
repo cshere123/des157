@@ -1,25 +1,95 @@
-/* media query for desktop */
+body {
+  font-family: 'Amatic SC', cursive;
+  width: 100%;
+  margin: auto;
+  font-size: 1.5em;
+}
 
-@media only screen and (min-width: 768px) {
-  /* declarations */
+header {
+  text-align: center;
+  font-size: 3em;
+}
+
+#bag {
+  width: 700px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  padding: 50px;
 }
 
 #tangerine {
   display: none;
+  position: relative;
+  border: 1px black solid;
+  box-sizing: border-box;
+  background-color: white;
 }
 
-#sharpie{
+#sharpie {
   display: none;
+  position: relative;
+  border: 1px black solid;
+  box-sizing: border-box;
+  background-color: white;
 }
 
 #ruler {
   display: none;
+  position: relative;
+  border: 1px black solid;
+  box-sizing: border-box;
+  background-color: white;
 }
 
-#description {
-  display: none;
+/* #description {
+  display: block;
+} */
+
+/* media query for desktop */
+
+@media only screen and (min-width: 768px) {
+  /* declarations */
+  /* h2 {
+    font-size: 4em;
+  } */
+  img {
+    display: inline-block;
+    padding: 4.5%;
+  }
+  div {
+    width: 90%;
+    margin-left: 15%;
+  }
+  #tangerine {
+    width: 10%;
+  }
+  #sharpie {
+    width: 30%;
+  }
+  #ruler {
+    height: 20%;
+  }
 }
+
 footer {
   position: fixed;
-  bottom: 20%;
+  bottom: 10%;
+}
+
+#close {
+  display: block;
+  float: right;
+}
+
+/*overlay*/
+
+.show {
+  display: block;
+  position: absolute;
+}
+
+.hide {
+  display: none;
 }
