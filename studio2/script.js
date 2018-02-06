@@ -8,11 +8,10 @@ var tangerine = document.getElementById("tangerine");
 var sharpie = document.getElementById("sharpie");
 var ruler = document.getElementById("ruler");
 var close = document.getElementById("close");
+var wrapper = document.getElementById("wrapper");
 
-
-//Does it have to be ID? can it use attribute because i want to use a class
-// var title = document.getElementById("title");
-// var description = document.getElementById("description");
+var title = document.getElementById("title");
+var description = document.getElementById("description");
 
 
 //hover over bag to open
@@ -29,9 +28,7 @@ hover.addEventListener("mouseover", function() {
 //items are opened after clicking on the backpack
 hover.addEventListener("click", function() {
   hover.style.display = "none";
-  tangerine.style.display = "block";
-  sharpie.style.display = "block";
-  ruler.style.display = "block";
+  wrapper.style.display = "block";
 });
 
 //items appear, hover over to have descriptions show
@@ -56,8 +53,6 @@ ruler.addEventListener("mouseover", function() {
 //this closes all the items and returns to main page
 close.addEventListener("click", function() {
   hover.style.display = "block";
-  close1.style.cursor = "pointer";
-  tangerine.style.display = "none";
-  sharpie.style.display = "none";
-  ruler.style.display = "none";
+  close.style.cursor = "pointer";
+  wrapper.style.display = "none";
 });
