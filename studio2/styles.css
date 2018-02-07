@@ -1,13 +1,12 @@
 body {
   font-family: 'Amatic SC', cursive;
   font-size: 1.5em;
-  height: 100%;
-  overflow: hidden;
+  width: 100%;
 }
 
 header {
   text-align: center;
-  font-size: 3em;
+  font-size: 2em;
 }
 
 div {
@@ -15,73 +14,55 @@ div {
   margin: auto;
 }
 
-/* positioning items */
+#hover {
+  justify-content: center;
+  display: flex;
+  margin: auto;
+}
+
+#wrapper {
+  display: none;
+  width: 800px;
+  margin: auto;
+}
 
 .item {
   margin-left: auto;
   margin-right: auto;
   display: inline-block;
-  padding-left: 100px;
+  padding-right: 23px;
+  width: 30%;
 }
 
-#wrapper {
-  display: none;
-  margin-top: 40px;
-  margin: auto;
-  width: 75%;
-}
-
-#title {
-  font-size: 1.5em;
-  margin-top: 80px;
+.text {
   text-align: center;
-}
-
-#description {
-  text-align: center;
-}
-
-#close {
-  display: block;
-}
-
-#bag {
-  display: flex;
-  justify-content: center;
-  position: absolute;
 }
 
 /* media query for iPad */
 
-@media only screen and (min-width: 768px) and (max-width: 769px){
+/* set min and width so that item and text display in vertical form */
+
+@media only screen and (max-width: 768px) {
   .item {
-    width: 40%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0%;
-    padding-bottom: 20px;
-  }
-  .text {
-    transform: translate(0%, 30%);
+    display: block;
+    width: 20%;
+    margin-bottom: 50px;
   }
   #close {
-    transform: translate(20%, 200%);
+    transform: translate(10%);
+    font-size: 2em;
   }
 }
 
 footer {
   position: fixed;
-  bottom: 20%;
-  padding-left: 10%;
+  text-align: center;
+  bottom: 10%;
 }
 
 a:link {
   text-decoration: none;
   color: black;
-  margin-right: 30px;
 }
 
 a:visited {
