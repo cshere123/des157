@@ -36,19 +36,19 @@ tangerine.addEventListener("mouseover", function() {
   tangerine.style.cursor = "pointer";
   title.innerHTML = "Tangerine";
   description.innerHTML = "Because I need my daily dose of Vitamin C";
-})
+});
 
 sharpie.addEventListener("mouseover", function() {
   sharpie.style.cursor = "pointer";
   title.innerHTML = "Sharpie";
-  description.innerHTML = "Because line strokes";
-})
+  description.innerHTML = "I use this sharpie whenever I want to draw dark strokes";
+});
 
 ruler.addEventListener("mouseover", function() {
   ruler.style.cursor = "pointer";
   title.innerHTML = "Mini ruler";
-  description.innerHTML = "Because lines";
-})
+  description.innerHTML = "A useful small ruler that helps me draw straight lines";
+});
 
 //this closes all the items and returns to main page
 close.addEventListener("click", function() {
