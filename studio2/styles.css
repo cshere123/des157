@@ -18,7 +18,20 @@ h1 {
 #wrapper {
   display: none;
   margin: auto;
-  width: 65%;
+  width: 50%;
+}
+
+#tangerine {
+  width: 20%;
+}
+
+#sharpie {
+  transform: translate(0%, -450%) rotate(90deg);
+  width: 25%;
+}
+
+#ruler {
+  width: 43%;
 }
 
 #close {
@@ -31,11 +44,12 @@ h1 {
   margin-right: auto;
   display: inline-block;
   padding-right: 23px;
-  width: 30%;
 }
 
 .text {
   text-align: center;
+  line-height: 20px;
+  margin-top: 60px;
 }
 
 /* media query for iPad */
@@ -45,18 +59,30 @@ h1 {
 @media only screen and (max-width: 768px) {
   .item {
     display: block;
-    width: 30%;
+    width: 50%;
     padding: 0;
     margin-bottom: 50px;
   }
+  .text {
+    line-height: 35px;
+  }
   #title {
     font-size: 2em;
+    margin-top: 20px;
   }
   #description {
     font-size: 1.5em;
   }
+  #tangerine {
+    width: 50%;
+  }
+  #sharpie {
+    transform: translate(0%) rotate(0deg);
+    width: 70%;
+  }
   #ruler {
     margin-bottom: 0;
+    width: 70%;
   }
 }
 
