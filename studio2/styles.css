@@ -4,14 +4,9 @@ body {
   width: 100%;
 }
 
-header {
+h1 {
   text-align: center;
-  font-size: 2em;
-}
-
-div {
-  width: 100%;
-  margin: auto;
+  font-size: 4em;
 }
 
 #hover {
@@ -22,8 +17,13 @@ div {
 
 #wrapper {
   display: none;
-  width: 800px;
   margin: auto;
+  width: 65%;
+}
+
+#close {
+  font-size: 2em;
+  transform: translate(-10%);
 }
 
 .item {
@@ -45,24 +45,32 @@ div {
 @media only screen and (max-width: 768px) {
   .item {
     display: block;
-    width: 20%;
+    width: 30%;
+    padding: 0;
     margin-bottom: 50px;
   }
-  #close {
-    transform: translate(10%);
+  #title {
     font-size: 2em;
+  }
+  #description {
+    font-size: 1.5em;
+  }
+  #ruler {
+    margin-bottom: 0;
   }
 }
 
 footer {
   position: fixed;
   text-align: center;
-  bottom: 10%;
+  bottom: 2%;
+  left: 2%;
 }
 
 a:link {
   text-decoration: none;
   color: black;
+  padding-right: 15px;
 }
 
 a:visited {
