@@ -1,0 +1,13 @@
+body {
+  width: 900px;
+  font-family: 'Amatic SC', cursive;
+  overflow: hidden;
+}
+
+footer {
+  font-family: 'Amatic SC', cursive;
+  position: fixed;
+  text-align: center;
+  bottom: 2%;
+  left: 2%;
+}
