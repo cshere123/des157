@@ -1,0 +1,216 @@
+/*-----CSS STYLES------------------------------------------------*/
+
+body {
+  font-family: 'Lato', sans-serif;
+  margin: auto;
+}
+
+header, h1, h2, h3, h4 {
+  font-family: 'Libre Baskerville', serif;
+}
+
+h1.intro {
+  margin-top: 200px;
+  font-size: 80pt;
+}
+
+p.intro {
+  font-size: 14pt;
+  font-family: 'Lato';
+  width: 25%;
+  margin-left: 38%;
+  text-align: center;
+  line-height: 30px;
+}
+
+.titlehome {
+  float: left;
+  position: relative;
+}
+
+.intro {
+  /* margin-top: 20%; */
+  margin-bottom: 5%;
+}
+
+.container {
+  text-align: center;
+  margin: 0;
+  left: 50%;
+  top: 50%;
+}
+
+p {
+  margin-bottom: 30px;
+}
+
+/* button styles ---------------------------------------------------*/
+
+/*enter button on index page*/
+
+.btn {
+  padding: 5px;
+  padding-left: 40px;
+  padding-right: 40px;
+  color: black;
+  border: 1px gray solid;
+  border-radius: 25px;
+  background-color: white;
+  text-align: center;
+  top: 70%;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 23pt;
+}
+
+/* Share or View page */
+
+#shareview {
+  padding-left: 40%;
+  padding-top: 20%;
+  display: inline-block;
+}
+
+#shareview a {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 25px;
+  color: black;
+}
+
+.onshare {
+  border-bottom: 1px gray solid;
+  width: inherit;
+  width: 300px;
+  line-height: 80px;
+}
+
+.onview {
+  margin-top: 20px;
+}
+
+.line {
+  display: block;
+  margin: 25px;
+  font-size: 15px;
+  text-align: center;
+  position: relative;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 50px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+}
+
+input {
+  padding: 3px;
+  outline: none;
+  border: 1px white solid;
+  background-color: gray;
+}
+
+input[type="text"], input[type="time"] {
+  width: 90px;
+  margin: 5px;
+  font-family: 'Alegreya Sans', sans-serif;
+}
+
+input[type="reset"], input[type="submit"] {
+  width: 100px;
+  margin: 2%;
+  background-color: gray;
+  color: white;
+  border-radius: 20px;
+}
+
+input[type="reset"]:focus, input[type="submit"]:focus {
+  background-color: pink;
+  color: black;
+}
+
+/* link styles-------------------------------------------- */
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: gray;
+}
+
+nav {
+  overflow: hidden;
+}
+
+nav ul {
+  list-style: none;
+  float: right;
+  text-align: right;
+  padding: 10px;
+}
+
+nav ul li {
+  display: inline;
+  padding-left: 30px;
+}
+
+nav ul li:last-child {
+  padding-right: 30px;
+}
+
+/* styles for resources page */
+
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.scrolling-wrapper-flexbox {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.card {
+  border: 1px solid white;
+  width: 500px;
+  height: 500px;
+  background: white;
+  border: 1px solid red;
+  display: inline-block;
+  flex: 0 0 auto;
+  margin-right: 3px;
+}
+
+.scrolling-wrapper, .scrolling-wrapper-flexbox {
+  height: 75px;
+  width: 100%;
+}
+
+/* -webkit-overflow-scrolling: touch;
+::-webkit-scrollbar {
+  display: none;
+} */
+
+footer {
+  text-align: center;
+  bottom: 0%;
+  position: fixed;
+  color: gray;
+  padding: 25px;
+}
+
+footer a:link {
+  color: gray;
+  margin-right: 20px;
+}

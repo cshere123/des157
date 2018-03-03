@@ -1,0 +1,102 @@
+<!-------SHARE HTML----------------------------------->
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Share</title>
+	<link href="https://necolas.github.io/normalize.css/7.0.0/normalize.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,700,900" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+	<div>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="stories.html">Stories</a></li>
+				<li><a href="share.html">Share</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="resources.html">Resources</a></li>
+			</ul>
+		</nav>
+
+		<h1 class="titlehome">Share your story</h1>
+		<section class="container">
+			<form id="shareform">
+				<div>
+					<label for="firstName">First Name (if you don't want to make this public, simply put 'Anonymous')</label>
+					<input type="text" name="firstName" id="firstName" required>
+				</div>
+
+				<div>
+					<label for="lastName">Last Name</label>
+					<input type="text" name="lastName" id="lastName">
+				</div>
+
+				<div>
+					<label for="email">Email</label>
+					<input type="text" name="email" id="email">
+				</div>
+
+				<div>
+					<label for="year">Year in School</label>
+					<input type="text" name="year" id="year" required>
+				</div>
+
+				<div>
+					<label for="major">Major</label>
+					<input type="text" name="major" id="major" required>
+				</div>
+
+				<div>
+					<p>Select all categories that apply to your story:</p>
+          <input type="checkbox" name="healing" id="healing">healing/recovery<br>
+					<input type="checkbox" name="home" id="home"> home&#40;roommates, housing issues, etc.&#41; <br>
+					<input type="checkbox" name="workschool" id="workschool"> work/school&#40;career, academic pressure, etc.&#41;<br>
+					<input type="checkbox" name="personal" id="personal"> personal&#40;identity, illness, relationships, etc.&#41;<br>
+				</div>
+
+				<div>
+					<label for="title">Title</label>
+					<input type="text" name="title" id="title" required>
+				</div>
+
+				<div>
+					<label for="share">Share</label>
+					<input type="text" name="share" id="share" required>
+				</div>
+
+				<div>
+					<label for="triggerwarning">Trigger Warning
+                            <button type="button">what is this?</button> <!--can also use the info symbol?-->
+                        </label>
+					<input type="text" name="triggerwarning" id="triggerwarning">
+				</div>
+
+				<div>
+					<input type="checkbox" name="emailstory" id="emailstory"> Would you like to email a copy of this to yourself? Note: It will be difficult for you to find your story again later.<br>
+				</div>
+
+				<div>
+					<input type="submit" value="submit" action="stories.html">
+				</div>
+
+			</form>
+		</section>
+	</div>
+
+	<footer>
+		<a href="https://validator.w3.org/check?uri=referer">Valid HTML 5</a>
+		<a href="https://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a>
+	</footer>
+	<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+	<script src="script.js"></script>
+</body>
+
+</html>
