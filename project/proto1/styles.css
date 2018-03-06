@@ -1,0 +1,320 @@
+/*-----CSS STYLES------------------------------------------------*/
+
+body {
+  margin: auto;
+  /* background: radial-gradient(circle, #414141, #1C1C1C); */
+  background: radial-gradient(circle, #c9ccd89e, #a6a6bd);
+}
+
+h1.intro {
+  margin-top: 250px;
+  font-size: 80pt;
+  color: white;
+  font-weight: 400;
+  letter-spacing: 10px;
+  font-family: 'Lato', sans-serif;
+}
+
+p.intro {
+  font-size: 14pt;
+  font-family: 'Merriweather', serif;
+  font-weight: 300;
+  width: 25%;
+  margin-left: 38%;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+}
+
+.titlehome {
+  float: left;
+  position: relative;
+}
+
+.intro {
+  margin-bottom: 5%;
+}
+
+.container {
+  text-align: center;
+  margin: 0;
+  left: 50%;
+  top: 50%;
+}
+
+p{
+  font-family: 'Merriweather', serif;
+  font-size: 12px;
+  color: white;
+  font-weight: 300;
+}
+/* button styles ---------------------------------------------------*/
+
+/*enter button on index page*/
+
+.btn {
+  padding: 5px;
+  padding-left: 40px;
+  padding-right: 40px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 25px;
+  /* background-color: none; */
+  text-align: center;
+  top: 70%;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 23pt;
+  transition: all 0.4s ease 0s;
+}
+
+.btn:hover {
+  background-color:white;
+}
+
+/* Share or View page */
+
+.shareview-animation {
+  width: 100%;
+  height: 100%;
+  /* background: radial-gradient(circle, #414141, #1C1C1C); */
+  background: radial-gradient(circle, #c9ccd89e, #a6a6bd);
+}
+
+#overlay {
+  position: absolute;
+  top: 0;
+  left:0;
+  width:100%;
+  height:100%;
+  /* background: radial-gradient(circle, #414141, #1C1C1C); */
+  background: radial-gradient(circle, #c9ccd89e, #a6a6bd);
+  display:block;
+}
+
+p.shareview-animation {
+  text-align: center;
+  margin-top: 50%;
+  width: 30%;
+  line-height: 2em;
+  margin-left: 40%;
+}
+
+#shareview {
+  padding-left: 40%;
+  padding-top: 20%;
+  display: inline-block;
+}
+
+#shareview a {
+  font-family: 'Lato', serif;
+  font-weight: 300;
+  font-size: 25px;
+  color: white;
+}
+
+.onshare {
+  border-bottom: 1px gray solid;
+  width: inherit;
+  width: 300px;
+  line-height: 80px;
+}
+
+.onview {
+  margin-top: 20px;
+}
+
+.line {
+  display: block;
+  margin: 25px;
+  font-size: 15px;
+  text-align: center;
+  position: relative;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 50px;
+  color: white;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* border: 1px solid red; */
+}
+
+.sv {
+  padding-bottom: 30px;
+}
+
+input {
+  padding: 3px;
+  outline: none;
+  border: 1px white solid;
+  background-color: gray;
+  margin-top: 5px;
+}
+
+input[type="text"], input[type="time"] {
+ width: 90px;
+
+} 
+
+input[type="reset"], input[type="submit"], #maybelater {
+  width: 100px;
+  margin: 2%;
+  background-color: gray;
+  color: white;
+  border-radius: 20px;
+}
+
+input[type="reset"]:focus, input[type="submit"]:focus {
+  background-color: pink;
+  color: black;
+}
+
+/*---STORIES STYLES--------------------------------------*/
+
+canvas {
+  display: inline-block;
+  top:0;
+  position:fixed;
+  z-index:-5;
+}
+
+
+/* link styles-------------------------------------------- */
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: gray;
+}
+
+nav {
+  overflow: hidden;
+}
+
+nav ul {
+  list-style: none;
+  float: right;
+  text-align: right;
+  padding: 10px;
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+}
+
+nav ul li {
+  display: inline;
+  padding-left: 30px;
+}
+
+nav ul li:last-child {
+  padding-right: 30px;
+}
+
+/* styles for resource and about page */
+
+.resourceabout {
+  margin-left: 7%;
+  color: white;
+  font-family: 'Lato', sans-serif;
+}
+
+p.resourceabout {
+  font-family: 'Merriweather', serif;
+  font-weight:300;
+}
+
+h1.resourceabout{
+  font-size: 40px;
+  font-weight: 400;
+  margin-top: 5%;
+}
+
+/*form styles on share.html-------------------------------*/
+#shareform {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  margin:auto;
+  margin-top: 5%;
+  margin-bottom: 12%;
+  text-align: left;
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+}
+
+.wrapper {
+  display: grid;
+}
+
+.full-width {
+  grid-column: 1 / 3;
+}
+
+form label {
+  display: block;
+}
+
+input[type="text"], textarea {
+  width:100%;
+}
+
+#share {
+  width: 100%;
+  height: 100px;
+}
+
+
+
+/* styles for resources page --------------------------------*/
+
+.resourcecard {
+  margin-left: 6%;
+  margin-top: 2%;
+}
+
+.card {
+  font-family: 'Merriweather', serif;
+  font-size: 12px;
+  width: 250px;
+  height: 200px;
+  display: inline-table;
+  margin: 1%;
+  border: 0.5px rgb(235, 235, 235) solid;
+  padding: 2%;
+  color: white;
+}
+
+footer {
+  text-align: center;
+  bottom: 0%;
+  position: fixed;
+  color: gray;
+  padding: 25px;
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+}
+
+footer a:link {
+  color: gray;
+  margin-right: 20px;
+} 
+
+
+/* styles for ABOUT page --------------------------------*/
+.aboutpage{
+  margin-left:7%;
+  margin-right:60%;
+  color:white;
+}
