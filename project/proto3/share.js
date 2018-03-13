@@ -1,5 +1,6 @@
 //SCRIPT JS-------------------------------------//
-'use strict';
+
+
 // Initialize Firebase
 var config = {
   apiKey: "AIzaSyBU-4i6aqE_eNY3IosjA7ycNm33FXCF7eM",
