@@ -265,8 +265,27 @@ a:hover {
   color: gray;
 }
 
+.clickable {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
 nav {
   overflow: hidden;
+}
+
+#storiesnav {
+  z-index:5;
+  position:fixed;
+  right:0;
+}
+
+#filters {
+  z-index:6;
+  position:fixed;
+  left:10;
 }
 
 nav ul {
@@ -281,6 +300,7 @@ nav ul {
 nav ul li {
   display: inline;
   padding-left: 30px;
+  z-index: 9999;
 }
 
 nav ul li:last-child {
