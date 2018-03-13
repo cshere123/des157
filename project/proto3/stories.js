@@ -1,257 +1,252 @@
-// //3D stuff
-// 'use strict';
-// var camera, controls, scene, raycaster, renderer;
-// var container, stats;
-
-// var mouse = new THREE.Vector2(),INTERSECTED;
-// // var radius = 100, theta = 0;
-
-// var PI2 = Math.PI*2;
-
-// var programFill = function (context) {
-//   context.beginPath();
-//   context.arc(0,0,0,5,0,PI2, true);
-//   context.fill();
-// }
-
-// var programStroke = function (context){
-//   context.line.Width = 0.025;
-//   context.beginPath();
-//   context.arc(0,0,0,5,0,PI2, true);
-//   context.stroke();
-// }
-
-// initialize();
-// animate();
-
-// //draws the sphere, sets the window, smooths the textures of the spheres to appear
-// function initialize() {
-//   //background color
-//   scene = new THREE.Scene();
-//   scene.background = new THREE.Color('blue');
-
-//   //illusion to have depth
-//   scene.fog = new THREE.FogExp2('white', 0.002);
-//   renderer = new THREE.CanvasRenderer();
-
-//   camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.1, 10000);
-//   camera.position.set (0,300,500);
-//   controls = new THREE.OrbitControls(camera, renderer.domElement);
-//   controls.addEventListener('change', render);
-
-//   var light= new THREE.DirectionalLight(0xffffff, 1);
-//   scene.add(light);
-
-//   //draws the shape, using MeshPhongMaterial to have shapes appear
-//   var geometry = new THREE.SphereGeometry(15, 8, 6, 0, 6.3, 0, 3.5);
-//   var material = new THREE.MeshPhongMaterial({
-//     color: 0xffffff,
-//   });
-
-//   //to have multiple shapes instead of just drawing one
-//   // for (var i = 0; i < 200; i++) {
-//   //   var mesh = new THREE.Mesh(geometry, material);
-//   //   mesh.position.x = (Math.random() - 0.1) * 500;
-//   //   mesh.position.y = (Math.random() - 0.1) * 500;
-//   //   mesh.position.z = (Math.random() - 0.1) * 500;
-//   //   scene.add(mesh);
-//   // }
-
-//   //particles
-
-// for ( var i = 0; i < 100; i ++ ) {
-
-//   var particle = new THREE.Sprite( new THREE.SpriteCanvasMaterial( { color: Math.random() * 0x808080 + 0x808080, program: programStroke } ) );
-
-
-//   particle.position.x = Math.random() * 800 - 400;
-
-
-//   particle.position.y = Math.random() * 800 - 400;
-
-
-//   particle.position.z = Math.random() * 800 - 400;
-
-
-//   particle.scale.x = particle.scale.y = Math.random() * 20 + 20;
-
-
-//   scene.add( particle );
-
-// }
-
-
-
-//   //smooths the pixels, without it, it will look grainy
-//   renderer.setPixelRatio(window.devicePixelRatio);
-//   renderer.setSize(window.innerWidth, window.innerHeight);
-//   container = document.getElementById('container');
-//   container.appendChild(renderer.domElement);
-
-//   stats = new Stats();
-//   container.appendChild(stats.dom);
-
-//   raycaster = new THREE.Raycaster();
-//   document.addEventListener('mousemove', onDocumentMouseMove, false);
-//   //window resizes
-//   window.addEventListener('resize', onWindowResize, false);
-// }
-
-// //moushover affect
-// function onDocumentMouseMove(event) {
-//   event.preventDefault();
-//   mouse.x = (event.clientX / window.innerWidth)- 1;
-//   mouse.y = -(event.clientY / window.innerHeight)+ 1;
-// }
-
-// function onWindowResize (){
-//   camer.aspect = window.innerWidth / window.innerHeight;
-//   camera.updateProjectionMatrix();
-//   renderer.setSize(window.innerWidth, window.innerHeight);
-// }
-
-// //smooths the zooming and dragging
-// function animate() {
-//   requestAnimationFrame(animate);
-//   render();
-//   stats.update();
-// }
-
-// var radius=600;
-// var theta=0;
-
-// //allows for the whole thing to work: allow camera view to have camera perspective by clicking and dragging or zooming in and out
-// function render() {
-//   theta += 0.1;
-//   camera.position.x = radius * Math.sin( THREE.Math.degToRad( theta ) );
-//   camera.position.y = radius * Math.sin( THREE.Math.degToRad( theta ) );
-//   camera.position.z = radius * Math.cos( THREE.Math.degToRad( theta ) );
-
-//   camera.lookAt( scene.position );
-//   camera.updateMatrixWorld();
-//   // find intersections
-//   raycaster.setFromCamera( mouse, camera );
-//   var intersects = raycaster.intersectObjects( scene.children );
-//   if ( intersects.length > 0 ) {
-//       if ( INTERSECTED != intersects[ 0 ].object ) {
-//           if ( INTERSECTED ) INTERSECTED.material.emissive.setHex( INTERSECTED.currentHex );
-//           INTERSECTED = intersects[ 0 ].object;
-//           INTERSECTED.currentHex = INTERSECTED.material.emissive.getHex();
-//           INTERSECTED.material.emissive.setHex( 0xff0000 );
-//         }
-//      } else {
-//         if ( INTERSECTED ) INTERSECTED.material.emissive.setHex( INTERSECTED.currentHex );
-//         INTERSECTED = null;
-//      }
-
-//   renderer.render(scene, camera);
-// }
-
-//--------------------------------------------------------------------------------------------------
-
-var container, stats;
-var camera, scene, renderer;
-var raycaster;
-var mouse;
-var PI2 = Math.PI * 2;
-var programFill = function(context) {
-  context.beginPath();
-  context.arc(0, 0, 0.5, 0, PI2, true);
-  context.fill();
+'use strict';
+console.log("hi");
+//linking to firebase------------------------------------------------------------------
+var config = {
+  apiKey: "AIzaSyBU-4i6aqE_eNY3IosjA7ycNm33FXCF7eM",
+  authDomain: "unspoken-37e98.firebaseapp.com",
+  databaseURL: "https://unspoken-37e98.firebaseio.com",
+  projectId: "unspoken-37e98",
+  storageBucket: "",
+  messagingSenderId: "161766093627"
 };
-var programStroke = function(context) {
-  context.lineWidth = 0.025;
-  context.beginPath();
-  context.arc(0, 0, 0.5, 0, PI2, true);
-  context.stroke();
-};
-var INTERSECTED;
-init();
-animate();
+firebase.initializeApp(config);
 
-function init() {
-  container = document.createElement('div');
-  document.body.appendChild(container);
-  camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 1, 10000);
-  camera.position.set(0, 300, 500);
-  scene = new THREE.Scene();
-  scene.background = new THREE.Color(0x93A4D9);
-  for (var i = 0; i < 300; i++) {
-    var particle = new THREE.Sprite(new THREE.SpriteCanvasMaterial({
-      color: 0xffffff,
-      program: programStroke
-    }));
-    particle.position.x = Math.random() * 800 - 400;
-    particle.position.y = Math.random() * 800 - 400;
-    particle.position.z = Math.random() * 800 - 400;
-    particle.scale.x = particle.scale.y = Math.random() * 10 + 30;
-    scene.add(particle);
+var values;
+
+
+//how to tie in with 3D --> add event listeners on the particles and let them retrieve
+// a random post from the database
+
+//testing
+console.log('about to bind on value');
+var newMessageRef = firebase.database().ref('messages');
+newMessageRef.on('value', function(snapshot) {
+
+  // stores the value of the ref as a js Object
+  console.log('val:');
+  values = snapshot.val();
+  console.log(values); // prints values to console
+
+  // iterates through children of the ref
+  console.log('forEach:');
+  snapshot.forEach(function(childSnapshot) {
+    console.log(childSnapshot.key);
+    console.log(childSnapshot.val());
+    // document.getElementById("demo").innerHTML = childSnapshot.key;
+    // document.getElementById("demo").innerHTML = "<br />" + childSnapshot.val();
+  }); // for each child, print the key and value to console
+
+  //test
+  var value = values[Math.random()];
+});
+
+
+//STARS--------------------------------------------------------------------------------
+//canvas 1 gets the width and height of the canvas
+var canvas = document.getElementById('canvas');
+var context = canvas.getContext('2d');
+var w = canvas.width = window.innerWidth;
+var h = canvas.height = window.innerHeight;
+
+var hue = 217;
+
+var stars = [];
+var count = 0;
+var maxStars = 1400;
+
+//canvas 2: where we create animated small stars
+var canvas2 = document.createElement('canvas');
+var context2 = canvas2.getContext('2d');
+canvas2.width = 100;
+canvas2.height = 100;
+
+var half = canvas2.width / 2;
+var gradient2 = context2.createRadialGradient(half, half, 0, half, half, half);
+//colorstop(offset,color)
+gradient2.addColorStop(0.025, '#fff');
+gradient2.addColorStop(0.1, 'hsl(' + hue + ', 61%, 33%)');
+gradient2.addColorStop(0.25, 'hsl(' + hue + ', 64%, 6%)');
+gradient2.addColorStop(1, 'transparent');
+
+context2.fillStyle = gradient2;
+context2.beginPath();
+//arc(center x, center y, ____, start angle, end angle) --> for circle, end and start angle: 0, Math.PI*2
+context2.arc(half, half, half, 0, Math.PI * 2);
+context2.fill();
+
+//canvas 3: where we create storystars
+var canvas3 = document.createElement('canvas');
+var context3 = canvas3.getContext('2d');
+canvas3.width = 100;
+canvas3.height = 100;
+
+//color of storystars
+var hue2 = 250;
+
+var gradient3 = context3.createRadialGradient(half, half, 0, half, half, half);
+//colorstop(offset,color)
+gradient3.addColorStop(0.025, '#fff');
+gradient3.addColorStop(0.1, 'hsl(' + hue2 + ', 61%, 33%)');
+gradient3.addColorStop(0.25, 'hsl(' + hue2 + ', 64%, 6%)');
+gradient3.addColorStop(1, 'transparent');
+
+context3.fillStyle = gradient3;
+context3.beginPath();
+//arc(center x, center y, ____, start angle, end angle) --> for circle, end and start angle: 0, Math.PI*2
+context3.arc(half, half, half, 0, Math.PI * 2);
+context3.fill();
+
+function random(min, max) {
+  if (arguments.length < 2) {
+    max = min;
+    min = 0;
   }
 
-  // controls = new THREE.OrbitControls(camera, renderer.domElement);
-  // controls.addEventListener('change', render);
+  if (min > max) {
+    var hold = max;
+    max = min;
+    min = hold;
+  }
 
-  //
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
-  raycaster = new THREE.Raycaster();
-  mouse = new THREE.Vector2();
-  renderer = new THREE.CanvasRenderer({
-    antialias: true,
-    alpha: true
+function maxOrbit(x, y) {
+  var max = Math.max(x, y, );
+  var diameter = Math.round(Math.sqrt(max * max + max * max));
+  return diameter / 2;
+}
+
+var star = function() {
+  this.orbitRadius = random(maxOrbit(w, h));
+  this.radius = random(60, this.orbitRadius) / 8;
+  this.orbitX = w / 2;
+  this.orbitY = h / 2;
+  this.timePassed = random(0, maxStars);
+  this.speed = random(this.orbitRadius) / 300000;
+  this.alpha = random(2, 10) / 10;
+  count++;
+  stars[count] = this;
+}
+
+star.prototype.draw = function() {
+  var x = Math.sin(this.timePassed) * this.orbitRadius + this.orbitX;
+  var y = Math.cos(this.timePassed) * this.orbitRadius + this.orbitY;
+  var twinkle = random(10);
+
+  if (twinkle === 1 && this.alpha > 0) {
+    this.alpha -= 0.05;
+  } else if (twinkle === 2 && this.alpha < 1) {
+    this.alpha += 0.05;
+  }
+
+  context.globalAlpha = this.alpha;
+  context.drawImage(canvas2, x - this.radius / 2, y - this.radius / 2, this.radius, this.radius);
+  this.timePassed += this.speed;
+}
+
+function animation() {
+  context.globalCompositeOperation = 'source-over';
+  context.globalAlpha = 0.7;
+  context.fillStyle = 'hsla(228, 29%, 15%, 1)';
+  context.fillRect(0, 0, w, h);
+
+  context.globalCompositeOperation = 'lighter';
+  for (var i = 1, l = stars.length; i < l; i++) {
+    stars[i].draw();
+  };
+
+  context3.fillStyle = 'hsla(150%, 64%, 6%, 1)';
+  for (var i = 1, l = storystars.length; i < l; i++) {
+    storystars[i].draw();
+  }
+
+  window.requestAnimationFrame(animation);
+}
+
+var clickable = document.getElementById('clickable');
+
+var storystars = []; //array of stars
+var count2 = 0;
+var storystar = function() {
+  this.orbitRadius = random(maxOrbit(w, h));
+  this.radius = random(60, this.orbitRadius) / 1; //size of the stars
+  this.orbitX = w / 2;
+  this.orbitY = h / 2;
+  this.timePassed = random(0, maxStars);
+  // this.speed = random(this.orbitRadius)/300000;
+  this.speed = 0;
+  this.alpha = random(2, 10) / 10;
+
+  // Add clickable div for this star
+  this.clickDiv = document.createElement('div');
+  this.clickDiv.style['display'] = 'block';
+  this.clickDiv.style['position'] = 'absolute';
+  this.clickDiv.style['height'] = this.radius + 'px';
+  this.clickDiv.style['width'] = this.radius + 'px';
+  this.clickDiv.style['cursor'] = 'pointer';
+  var count = count2;
+
+  // Add to clickable surface
+  clickable.appendChild(this.clickDiv);
+
+
+  //CLICK EVENT
+  //stories/values will appear in console after clicking on particles
+  this.clickDiv.addEventListener('click', function() {
+    // console.log(count); // add firebase print data here or smth
+    console.log(values);
+
+    // values.style.display = "block";
+
   });
-  renderer.setPixelRatio(window.devicePixelRatio);
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  container.appendChild(renderer.domElement);
-  stats = new Stats();
-  // container.appendChild(stats.dom);
-  document.addEventListener('mousemove', onDocumentMouseMove, false);
-  //
-  window.addEventListener('resize', onWindowResize, false);
+
+  count2++;
+  storystars[count2] = this;
 }
 
+storystar.prototype.draw = function() {
+  var x = Math.sin(this.timePassed) * this.orbitRadius + this.orbitX;
+  var y = Math.cos(this.timePassed) * this.orbitRadius + this.orbitY;
+  var twinkle = random(10);
 
-function onWindowResize() {
-  camera.aspect = window.innerWidth / window.innerHeight;
-  camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, window.innerHeight);
-}
-
-function onDocumentMouseMove(event) {
-  event.preventDefault();
-  mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-  mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
-}
-
-//
-function animate() {
-  requestAnimationFrame(animate);
-  render();
-  stats.update();
-}
-var radius = 600;
-var theta = 0;
-
-function render() {
-  // rotate camera
-  theta += 0.02;
-  camera.position.x = radius * Math.sin(THREE.Math.degToRad(theta));
-  camera.position.y = radius * Math.sin(THREE.Math.degToRad(theta));
-  camera.position.z = radius * Math.cos(THREE.Math.degToRad(theta));
-  camera.lookAt(scene.position);
-  camera.updateMatrixWorld();
-  // find intersections
-  raycaster.setFromCamera(mouse, camera);
-  var intersects = raycaster.intersectObjects(scene.children);
-  if (intersects.length > 0) {
-    if (INTERSECTED != intersects[0].object) {
-      if (INTERSECTED) INTERSECTED.material.program = programStroke;
-      INTERSECTED = intersects[0].object;
-      INTERSECTED.material.program = programFill;
-      console.log("hello");
-    }
-  } else {
-    if (INTERSECTED) INTERSECTED.material.program = programStroke;
-    INTERSECTED = null;
+  if (twinkle === 1 && this.alpha > 0) {
+    this.alpha -= 0.05;
+  } else if (twinkle === 2 && this.alpha < 1) {
+    this.alpha += 0.05;
   }
-  renderer.render(scene, camera);
+
+  this.clickDiv.style['top'] = (y - this.radius / 2) + 'px';
+  this.clickDiv.style['left'] = (x - this.radius / 2) + 'px';
+
+  context.globalAlpha = this.alpha;
+  context.drawImage(canvas3, x - this.radius / 2, y - this.radius / 2, this.radius, this.radius);
+
+  this.timePassed += this.speed;
+}
+
+//draw stars
+for (var i = 0; i < maxStars; i++) {
+  new star();
+}
+
+//draw storystars
+for (var i = 0; i < 100; i++) {
+  new storystar();
+}
+// storystar.addEventListener('click', function ()
+// {
+//     value;
+// });
+
+//for every star create an invisible html element so then when you click that area you can add a click event to it
+
+//each story star should now have a clickable element associated with it where you can now add eventlisteners to it
+
+animation();
+
+//alert for the filter that doesn't work yet
+var filterjs = document.getElementById("filterjs");
+if (onsubmit = "click") {
+  alert('filtered stories is coming soon!');
 }
