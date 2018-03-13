@@ -11,7 +11,7 @@ body {
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-h1.intro {
+h1.index {
   margin-top: 250px;
   font-size: 80pt;
   color: white;
@@ -20,7 +20,8 @@ h1.intro {
   font-family: 'Lato', sans-serif;
 }
 
-p.intro {
+p.index {
+  margin-bottom:4%;
   font-size: 14pt;
   font-family: 'Merriweather', serif;
   font-weight: 300;
@@ -37,7 +38,16 @@ p.intro {
 }
 
 .intro {
+  margin-top: 15%;
   margin-bottom: 5%;
+  font-size: 14pt;
+  font-family: 'Merriweather', serif;
+  font-weight: 300;
+  width: 25%;
+  margin-left: 38%;
+  text-align: center;
+  line-height: 30px;
+  color: white;
 }
 
 .container {
@@ -277,24 +287,25 @@ nav {
 }
 
 #storiesnav {
-  z-index:5;
-  position:fixed;
-  right:0;
+  z-index: 5;
+  position: fixed;
+  right: 0;
 }
 
 #filters {
-  z-index:6;
-  position:fixed;
-  left:10;
+  z-index: 6;
+  position: fixed;
+  left: 10;
 }
 
 nav ul {
   list-style: none;
   float: right;
   text-align: right;
-  padding: 10px;
+  padding: 20px;
+  margin-right: 40px;
   font-family: 'Lato', sans-serif;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 nav ul li {
@@ -335,6 +346,17 @@ h1.resourceabout {
   font-family: 'Lato', sans-serif;
   position: fixed;
   top: 6%;
+  left: 6%;
+}
+
+#sharestoryparagraph {
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Lato', sans-serif;
+  position: fixed;
+  margin-top: 3%;
+  width: 25%;
   left: 6%;
 }
 
