@@ -6,7 +6,7 @@ var config = {
   authDomain: "unspoken-37e98.firebaseapp.com",
   databaseURL: "https://unspoken-37e98.firebaseio.com",
   projectId: "unspoken-37e98",
-  storageBucket: "",
+  storageBucket: "unspoken-37e98.appspot.com",
   messagingSenderId: "161766093627"
 };
 firebase.initializeApp(config);
@@ -181,7 +181,7 @@ var storystar = function() {
     var index = Math.floor(Math.random() * vCount);
     console.log('index =' + index);
     value = values[index];
-    alert(value.firstName + ":\n" + value.share);
+    alert(value.name + ":\n" + value.share);
   });
 
   // Add to clickable surface
