@@ -181,7 +181,8 @@ var storystar = function() {
     var index = Math.floor(Math.random() * vCount);
     console.log('index =' + index);
     value = values[index];
-    alert(value.name + ":\n" + value.share);
+    alert(value.name + ":\n" + "\n" +
+      value.title + ":\n" + "\n" + value.share);
   });
 
   // Add to clickable surface
