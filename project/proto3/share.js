@@ -1,6 +1,5 @@
 //SCRIPT JS-------------------------------------//
-
-
+'use strict';
 // Initialize Firebase
 var config = {
   apiKey: "AIzaSyBU-4i6aqE_eNY3IosjA7ycNm33FXCF7eM",
@@ -16,7 +15,7 @@ firebase.initializeApp(config);
 var messagesRef = firebase.database().ref('messages');
 
 
-// document.getElementById('shareform').addEventListener('submit', submitForm);
+document.getElementById('shareform').addEventListener('submit', submitForm);
 
 //submit form
 function submitForm(e) {
@@ -67,6 +66,8 @@ function saveMessage(name, email, year, major, healing, home, workschool, person
     triggerwarning: triggerwarning,
     emailstory: emailstory,
   });
+  var overlaystories = document.getElementById("overlaystories");
+  if (onsubmit = "click") {
+    alert('Thank you for your willingness and bravery to share your story with us');
+  };
 };
-
-
