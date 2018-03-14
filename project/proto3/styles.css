@@ -21,7 +21,7 @@ h1.index {
 }
 
 p.index {
-  margin-bottom:4%;
+  margin-bottom: 4%;
   font-size: 14pt;
   font-family: 'Merriweather', serif;
   font-weight: 300;
@@ -72,11 +72,11 @@ p {
   padding: 5px;
   padding-left: 40px;
   padding-right: 40px;
+  padding-bottom: 12px;
   color: white;
   border: 1px solid white;
   border-radius: 25px;
   text-align: center;
-  top: 70%;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   font-size: 23pt;
@@ -85,6 +85,8 @@ p {
 
 .btn:hover {
   background-color: white;
+  color: #8491C4;
+
 }
 
 /* Share or View page -----------------------------------*/
@@ -113,60 +115,40 @@ p {
   0% {
     opacity: 1;
     z-index: 1;
-    background: #E8CBC0;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #636FA4, #E8CBC0);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #636FA4, #E8CBC0);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
   16% {
     opacity: 1;
     z-index: 1;
-    background: #E8CBC0;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #636FA4, #E8CBC0);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #636FA4, #E8CBC0);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
   84% {
     opacity: 1;
     z-index: 1;
-    background: #E8CBC0;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #636FA4, #E8CBC0);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #636FA4, #E8CBC0);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
   100% {
     opacity: 0;
+    z-index: 1;
   }
 }
 
 .overlay {
-  /* width: 400px; */
-  /* margin: 0 auto; */
-  position: absolute;
-  /* top: 0; */
+  margin: 0 auto;
+  opacity: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0;
   text-align: center;
-  -webkit-animation: fadeInOut 4s;
-  animation: fadeInOut 4s;
+  -webkit-animation: fadeInOut 3.5s;
+  animation: fadeInOut 3.5s;
 }
 
 p.shareview-animation {
   text-align: center;
-  padding-top: 25%;
   width: 100%;
   line-height: 2em;
   height: 45%;
   font-size: 16px;
-  /* padding-left: 100%; */
+  top: 50%;
+  position: absolute;
 }
 
 #shareview {
@@ -182,52 +164,11 @@ p.shareview-animation {
   color: white;
 }
 
-.onshare {
-  border-bottom: 2px white solid;
-  width: inherit;
-  width: 300px;
-  line-height: 80px;
-}
-
-.onview {
-  margin-top: 20px;
-}
-
-.line {
-  display: block;
-  margin: 25px;
-  font-size: 15px;
-  text-align: center;
-  position: relative;
-}
-
-.material-icons {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 50px;
-  color: white;
-  /* Preferred icon size */
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-  /* border: 1px solid red; */
-}
-
-.sv {
-  padding-bottom: 30px;
-}
-
 input {
-  padding: 3px;
   outline: none;
   border: 1px white solid;
   background-color: gray;
-  margin-top: 5px;
+  margin-top: 4px;
 }
 
 input[type="text"] {
@@ -244,7 +185,7 @@ input[type="text"] {
   background-color: transparent;
   text-align: center;
   font-family: 'Lato', sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 10pt;
   transition: all 0.4s ease 0s;
   margin-right: 10px;
@@ -253,6 +194,7 @@ input[type="text"] {
 #formsubmit:hover, #maybelater:hover {
   background-color: white;
   color: #8491C4;
+
 }
 
 /*---STORIES STYLES--------------------------------------*/
@@ -264,6 +206,38 @@ canvas {
   z-index: -5;
 }
 
+#storiesbtn {
+  padding: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 7px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 25px;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 14pt;
+  transition: all 0.4s ease 0s;
+  background-color: transparent
+}
+
+#storiesbtn:hover {
+  background-color: white;
+  color: #8491C4;
+}
+
+#clickableshare {
+  bottom: 20px;
+  right: 45px;
+  position: absolute;
+  color: white;
+  font-size: 30px;
+  font-weight: 400;
+  z-index: 5;
+  font-family: 'Lato', sans-serif;
+}
+
 /* link styles-------------------------------------------- */
 
 a {
@@ -272,7 +246,7 @@ a {
 }
 
 a:hover {
-  color: gray;
+  color: #8491C4;
 }
 
 .clickable {
@@ -295,15 +269,27 @@ nav {
 #filters {
   z-index: 6;
   position: fixed;
-  left: 10;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+select {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  border-radius: 25px;
+  padding: 8px;
+  border: 1px solid white;
+  transition: all 0.4s ease 0s;
+  background-color: black;
+  color: white;
+  appearance: none;
 }
 
 nav ul {
   list-style: none;
   float: right;
   text-align: right;
-  padding: 20px;
-  margin-right: 40px;
+  padding: 5px;
   font-family: 'Lato', sans-serif;
   font-size: 16px;
 }
@@ -318,10 +304,13 @@ nav ul li:last-child {
   padding-right: 30px;
 }
 
+nav ul li a.active{
+border-bottom: 1px solid white;
+}
 /* styles for resource and about page */
 
 .resourceabout {
-  margin-left: 7%;
+  text-align: center;
   color: white;
   font-family: 'Lato', sans-serif;
 }
@@ -355,7 +344,7 @@ h1.resourceabout {
   font-weight: 400;
   font-family: 'Lato', sans-serif;
   position: fixed;
-  margin-top: 3%;
+  margin-top: 5%;
   width: 25%;
   left: 6%;
 }
@@ -367,7 +356,7 @@ h1.resourceabout {
   margin: auto;
   text-align: left;
   font-family: 'Lato', sans-serif;
-  font-size: 12px;
+  font-size: 15px;
   margin-left: 35%;
 }
 
@@ -378,27 +367,41 @@ h1.resourceabout {
 
 .full-width {
   grid-column: 1 / 3;
+  color: white;
 }
 
 form label {
   display: block;
   color: white;
-  font-size: 4;
-  /* margin-bottom: 2px; */
+}
+
+
+
+[type="checkbox"], [type="radio"] {
+  box-sizing: border-box;
+  margin-right: 4px;
 }
 
 input[type="text"], textarea {
-  width: 100%;
+  width: 98%;
   height: 20px;
   padding: 6px;
   border: none;
   background-color: #636FA4;
   border-radius: 5px;
   color: white;
+  margin-top: 8px;
+}
+
+#selectshare {
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  color: white;
+  font-weight: 400;
 }
 
 #share {
-  width: 100%;
+  width: 98%;
   height: 70px;
 }
 
@@ -424,10 +427,11 @@ input[type="text"], textarea {
 /* styles for ABOUT page --------------------------------*/
 
 .aboutpage {
-  margin-left: 7%;
-  margin-right: 50%;
-  color: white;
-  line-height: 15pt;
+color: white;
+line-height: 15pt;
+text-align: justify;
+width: 40%;
+margin: auto;
 }
 
 p.aboutpage {
@@ -444,22 +448,14 @@ footer {
   padding: 25px;
   font-family: 'Lato', sans-serif;
   font-size: 12px;
+
 }
 
 footer a:link {
-  color: gray;
+  color: white;
   margin-right: 20px;
 }
 
-/* stories html */
-
-#teststories {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #fff;
-  box-shadow: 0 0 60px 30px #fff, /* inner white */
-  0 0 100px 60px #f0f, /* middle magenta */
-  0 0 140px 90px #0ff;
-  /* outer cyan */
+footer:hover{
+  color: #8491C4;
 }
