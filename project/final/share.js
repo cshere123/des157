@@ -75,7 +75,18 @@ triggerwarninginfo.addEventListener('click', function() {
   alert('Trigger warnings are warnings that a work contains writing or concepts that could act as a trauma trigger. If your story contains graphic content that could trigger others, please make sure to include trigger warnings.');
 });
 
-var formsubmit = document.getElementById("formsubmit");
-formsubmit.addEventListener('click', function() {
-  alert("Thank you for your willingness and bravery to share your story with us!");
+// var formsubmit = document.getElementById("formsubmit");
+// formsubmit.addEventListener('click', function() {
+//   alert("Thank you for your willingness and bravery to share your story with us!");
+// })
+
+var submitconfirm = document.getElementById("submitconfirm");
+var close = document.getElementById("close");
+
+submitconfirm.addEventListener('click', function() {
+  submitconfirm.style.display = "block";
+})
+
+close.addEventListener('click', function() {
+  submitconfirm.style.display = "none";
 })

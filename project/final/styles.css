@@ -4,6 +4,7 @@ body {
   margin: auto;
   background: -webkit-linear-gradient(to right, #615567, #f7ddfc);
   background: linear-gradient(to right, #615567, #f7ddbc);
+  overflow: hidden;
 }
 
 h1.index {
@@ -53,10 +54,12 @@ p.index {
 }
 
 p {
-  font-family: 'Merriweather', serif;
-  font-size: 12px;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
   color: white;
   font-weight: 300;
+  letter-spacing: 0.3px;
+  width: 90%;
 }
 
 /* button styles ---------------------------------------------------*/
@@ -127,7 +130,6 @@ p {
 .overlay {
   margin: 0 auto;
   opacity: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   text-align: center;
@@ -143,7 +145,7 @@ p.stories-animation {
   font-size: 16px;
   top: 50%;
   position: absolute;
-  opacity:1;
+  opacity: 1;
 }
 
 #shareview {
@@ -191,6 +193,37 @@ input[type="text"] {
   color: #665c69;
 }
 
+.unspokentitle {
+  color: #ffffff6b;
+  font-size: 24px;
+  font-weight: 400;
+  font-family: 'Lato', sans-serif;
+  position: fixed;
+  top: 0%;
+  left: 2%;
+}
+
+#submitconfirm {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  color: deeppink;
+  display: none;
+  opacity: 0.85;
+}
+
+/* vertically center text */
+
+#submitconfirm p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /*---STORIES STYLES--------------------------------------*/
 
 canvas {
@@ -225,6 +258,11 @@ canvas {
   color: #665c69;
 }
 
+#clickableshare a:hover {
+  /* background-color: transparent; */
+  color: white;
+}
+
 #clickableshare {
   bottom: 60px;
   right: 50px;
@@ -240,11 +278,16 @@ canvas {
 
 a {
   text-decoration: none;
-  color: white;
+  color: #ffffff82;
 }
 
 a:hover {
-  color: #665c69;
+  color: white;
+}
+
+#clickableshare:hover {
+  font-size: 37px;
+  border-bottom: 1px solid white;
 }
 
 .clickable {
@@ -305,7 +348,7 @@ nav ul li:last-child {
 }
 
 nav ul li a.active {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #ffffff82;
 }
 
 /* styles for resource and about page */
@@ -433,10 +476,11 @@ div.resourcecard {
 
 .aboutpage {
   color: white;
-  line-height: 15pt;
+  line-height: 18pt;
   text-align: justify;
   width: 40%;
   margin: auto;
+  font-family: 'Merriweather', serif;
 }
 
 p.aboutpage {
@@ -462,4 +506,45 @@ footer a:link {
 
 footer:hover {
   color: #665c69;
+}
+
+/* storybox display */
+
+#storyBox {
+  font-family: 'Lato', sans-serif;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  /* margin: auto; */
+  left: 0px;
+  color: white;
+  max-height: 920px;
+  overflow-x: hidden;
+  padding-top: 6%;
+}
+
+#storyBox div {
+  background-color: rgb(15, 15, 15);
+  width: 6in;
+  line-height: 25px;
+  max-height: 550px;
+  overflow-x: hidden;
+  margin: auto;
+  font-family: "Lato", sans-serif;
+  padding-bottom: 30px;
+  padding-left: 50px;
+  padding-top: 30px;
+}
+
+#close {
+  background-color: none;
+  font-size: 24px;
+}
+
+#storytitle {
+  font-size: 30px;
+  font-family: "Merriweather", serif;
+  line-height: 42px;
 }

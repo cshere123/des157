@@ -14,3 +14,14 @@ function hideOv() {
   overlayId.setAttribute('class', 'hide');
   clearTimeout(timerId);
 };
+
+/* var deactivateLink = document.getElementById("potato");
+deactivateLink.addEventListener('click',function(){
+  console.log("Do this hit here");
+  alert('External links have been disabled for this kiosk.');  
+}); */
+
+function theAlert(){
+  console.log("Does this hit here");
+  alert('External links have been disabled for this kiosk.');
+};

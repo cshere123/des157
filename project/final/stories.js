@@ -51,8 +51,8 @@ function retrieveData() {
 //canvas 1 gets the width and height of the canvas
 var canvas = document.getElementById('canvas');
 var context = canvas.getContext('2d');
-var w = canvas.width = window.innerWidth/2;
-var h = canvas.height = window.innerHeight/2;
+var w = canvas.width = window.innerWidth;
+var h = canvas.height = window.innerHeight;
 
 var hue = 15;
 
@@ -125,11 +125,11 @@ function maxOrbit(x, y) {
 
 var star = function() {
   this.orbitRadius = random(maxOrbit(w, h));
-  this.radius = random(60, this.orbitRadius) / 12;
+  this.radius = random(60, this.orbitRadius) / 9;
   this.orbitX = w / 2;
   this.orbitY = h / 2;
   this.timePassed = random(0, maxStars);
-  this.speed = random(this.orbitRadius) / 300000;
+  this.speed = random(this.orbitRadius) / 600000;
   //effects opacity of the star
   this.alpha = random(1, 10) / 14;
   count++;
@@ -191,16 +191,32 @@ var storystar = function() {
   this.clickDiv = document.createElement('div');
   this.clickDiv.style.display = 'block';
   this.clickDiv.style.position = 'absolute';
-  this.clickDiv.style.height = this.radius + 'px';
-  this.clickDiv.style.width = this.radius + 'px';
+  this.clickDiv.style.height = this.radius / 4 + 'px';
+  this.clickDiv.style.width = this.radius / 4 + 'px';
   this.clickDiv.style.cursor = 'pointer';
 
   //adds event listener to the star to read a value from the database
   this.clickDiv.addEventListener('click', function() {
     var index = Math.floor(Math.random() * vCount);
+    var storyBox = document.getElementById("storyBox");
     console.log('index =' + index);
     value = values[index];
-    alert(value.name + "\n" + "\n" + value.title + "\n" + "\n" + value.share);
+    // alert(value.name + "\n" + "\n" + value.title + "\n" + "\n" + value.share);
+    // const closeBtn = document.createElement('button');
+    // closeBtn.type = 'button';
+    // document.querySelector('storyBox').append('closeBtn');
+    storyBox.setAttribute('class', 'show');
+    storyBox.innerHTML = "<div id='close'>&otimes;" + "<p id='storytitle'>" + value.title + "</p> <p id='storyname'>by " + value.name + "</p>" + "<p id='storyshare'>" + value.share + "</p></div>";
+
+    // var title = storytitle;
+    // value.title = title.fontsize(7);
+    // title.style.fontSize = "40px";
+    // title.style.fontWeight = "700";
+
+    storyBox.addEventListener('click', function() {
+      storyBox.innerHTML = "";
+      storyBox.setAttribute('class', 'hide');
+    });
   });
 
   // Add to clickable surface
@@ -221,8 +237,8 @@ storystar.prototype.draw = function() {
     this.alpha += 0.05;
   }
 
-  this.clickDiv.style.top = (y - this.radius / 2) + 'px';
-  this.clickDiv.style.left = (x - this.radius / 2) + 'px';
+  this.clickDiv.style.top = (y - this.radius / 8) + 'px';
+  this.clickDiv.style.left = (x - this.radius / 8) + 'px';
 
   context.globalAlpha = this.alpha;
   context.drawImage(canvas3, x - this.radius / 2, y - this.radius / 2, this.radius, this.radius);
@@ -244,10 +260,10 @@ animation();
 
 waitHide();
 
-function waitHide(){
-      var obj = document.getElementById("stories-animation");
-      window.setTimeout(
-          function removethis(){
-              obj.style.display='none';
-          }, 4000);
+function waitHide() {
+  var obj = document.getElementById("stories-animation");
+  window.setTimeout(
+    function removethis() {
+      obj.style.display = 'none';
+    }, 4000);
 }

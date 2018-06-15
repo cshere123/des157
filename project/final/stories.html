@@ -1,6 +1,5 @@
-
-
 <!doctype html>
+
 <html lang="en">
 
 <head>
@@ -16,38 +15,52 @@
 </head>
 
 <body>
-	<h1 id="clickableshare"><a href="share.html">Share your story.</a></h1>
+	<h1 id="clickableshare">
+		<a href="share.html">Share your story.</a>
+	</h1>
 	<div id="container">
-	<nav id="storiesnav">
-		<ul>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="stories.html" class="active">Stories</a></li>
-			<li><a href="share.html">Share</a></li>
-			<li><a href="about.html">About</a></li>
-			<li><a href="resources.html">Resources</a></li>
-		</ul>
-	</nav>
+		<nav id="storiesnav">
+			<ul>
+				<li>
+					<a href="index.html">Home</a>
+				</li>
+				<li>
+					<a href="stories.html" class="active">Stories</a>
+				</li>
+				<li>
+					<a href="share.html">Share</a>
+				</li>
+				<li>
+					<a href="about.html">About</a>
+				</li>
+				<li>
+					<a href="resources.html">Resources</a>
+				</li>
+			</ul>
+		</nav>
 
-	<form id="filters">
-		<label id="filterlabel" for="filter">filter:</label>
-		<select name="filter" id="filter">
-			<option value="all">all</option>
-	    	<option value="home">Home</option>
-	    	<option value="personal">Personal</option>
-	    	<option value="workschool">Work/School</option>
-	  	</select>
-		<br><br>
-		<input type="button" value="filter" onClick="retrieveData()" id="queryStory">
-	</form>
-	<canvas id="canvas" width="400" height="200" style="width:100%;height:100%"></canvas>
-	<div class="clickable" id="clickable">
-		<div class="click-item"></div>
+		<form id="filters">
+			<label id="filterlabel" for="filter">filter stories:</label>
+			<select name="filter" id="filter" onchange="retrieveData()">
+				<option value="all">all</option>
+				<option value="home">Home</option>
+				<option value="personal">Personal</option>
+				<option value="workschool">Work/School</option>
+			</select>
+			<!-- <br></br> -->
+			<!-- <input type="button" value="filter" onClick="retrieveData()" id="queryStory"> -->
+		</form>
+		<canvas id="canvas" width="400" height="200" style="width:100%;height:100%"></canvas>
+		<div class="clickable" id="clickable">
+			<div class="click-item"></div>
+		</div>
 	</div>
-</div>
 
-<div class="overlay show">
+	<div class="overlay show">
 		<p id="stories-animation" class="stories-animation">Click on the particles to view what people have shared</p>
 	</div>
+
+	<div id="storyBox" class="hide"></div>
 
 	<footer>
 		<a href="https://validator.w3.org/check?uri=referer">Valid HTML 5</a>
